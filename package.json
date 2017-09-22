@@ -1,0 +1,30 @@
+{
+  "name": "wikistack",
+  "version": "1.0.0",
+  "description": "workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "nodemon -e html,js,css ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasGalarza/wikistack.git"
+  },
+  "author": "Nicholas, Veekas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NicholasGalarza/wikistack/issues"
+  },
+  "homepage": "https://github.com/NicholasGalarza/wikistack#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chalk": "^2.1.0",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "nunjucks": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
