@@ -15,13 +15,13 @@ nunjucks.configure('views', {
   noCache: true
 });
 app.use(morgan('dev'));
-
 app.use(bodyParser.urlencoded({extended: true})); // HTML form submits.
-
 app.use(bodyParser.json()); // ajax req.
-
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.get('/', (req, res) => {
+  res.render('index');
+});
 app.listen(3000, function() {
   console.log("Listening on port ", 3000);
 });
