@@ -27,6 +27,10 @@ const Page = db.define('page', {
     type: Sequelize.DATE,
     isDate: true,
     defaultValue: Sequelize.NOW
+  }, {
+    hooks:
+      beforeValidate: (page, options) => {},
+      afterValidate: (page, options) => {}
   }
 });
 
