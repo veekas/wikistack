@@ -1,6 +1,5 @@
 const express = require('express');
-let app = express();
-
+const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const chalk = require('chalk');
