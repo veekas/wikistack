@@ -18,11 +18,12 @@ nunjucks.configure('views', {
   noCache: true
 });
 app.use(morgan('dev'));
-app.use(routes);
 
 app.use(bodyParser.urlencoded({extended: true})); // HTML form submits.
 app.use(bodyParser.json()); // ajax req.
 app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(routes);
 
 models.db.sync({force: true })
   .then(() => {

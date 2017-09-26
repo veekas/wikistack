@@ -16,7 +16,9 @@ const Page = db.define('page', {
   },
   urlTitle: {
     type: Sequelize.STRING,
-    isUrl: true,
+    validate: {
+      isUrl: true
+    },
     allowNull: false
   },
   content: {
@@ -28,8 +30,10 @@ const Page = db.define('page', {
   },
   date: {
     type: Sequelize.DATE,
-    isDate: true,
-    defaultValue: Sequelize.NOW
+    defaultValue: Sequelize.NOW,
+    validate: {
+      isDate: true
+    }
   }
 }, {
     getterMethods: {
@@ -54,7 +58,9 @@ const User = db.define('user', {
   },
   email: {
     type: Sequelize.STRING,
-    isEmail: true,
+    validate: {
+      isEmail: true
+    },
     allowNull: false
   }
 });
